@@ -1,7 +1,6 @@
-.hidden{
-    display: none;
+body{
+    height: 100vh;
 }
-
 #checkout-section{
     max-width: 960px;
     margin: auto;
@@ -51,19 +50,22 @@
     height: 100px;
     margin-bottom: 10px;
     width: 99.8%;
-
 }
 
 
 .checkout-item-remove-btn img{
     width: 70px;
+
 }
 .checkout-select{
     width: 40px;
     height: 40px;
-    
+    background: #1F2937;
+    color: white;
 }
 .checkout-select option{
+    display: block;
+    font-size: 16px;
     color: white;
 }
 .checkout-item-details{
