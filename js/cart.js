@@ -26,6 +26,7 @@ if (cart_id===null){
     create_or_get_cart()
     .then(data=>{
         localStorage.setItem('cart_id',data.id)
+        window.location.reload()
     })
 }
 

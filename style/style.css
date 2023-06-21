@@ -483,9 +483,8 @@ width: 290px;
     justify-content: center;
 }
 .cart-item-img{
-    min-width: 100px;
-    max-width: 100px;
-
+    min-width: 90px;
+    max-width: 90px;
 }
 .cart-item-img img{
     margin: auto;

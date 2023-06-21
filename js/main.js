@@ -50,10 +50,10 @@ function loadInitialData() {
       });
 
       nextPageUrl = data.next;
-      document.body.removeChild(loading_element);
+      
     })
     .catch(err => {
-      console.log(err);
+      console.log(err,'err');
       document.body.removeChild(loading_element);
     });
 }
@@ -303,6 +303,8 @@ nav_res_category.addEventListener('click',e=>{
 })
 
 window.addEventListener('load',event=>{
-  document.body.removeChild(loading_element)
+  setTimeout(() => {
+    document.body.removeChild(loading_element)
+  }, 500);
 })
 

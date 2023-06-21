@@ -93,8 +93,7 @@ export const createCartItem = (name, price, total,imageUrl) => {
           img.src = '/assets/no-camera.png';
         }
         
-        img.alt = '';
-        img.style.width = '90px';
+        img.alt = 'product';
         itemImg.appendChild(img);
       
         const quantityRemove = document.createElement('div');
