@@ -5,16 +5,17 @@ body{
 }
 
 .login-section{
-    height: 100vh;
+    margin-top: 50px;
     background: #0B1120;
 }
 .sign-up-section{
-    height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background: #0B1120;
 }
 
 .reset-password-email-section{
-    height: 100vh;
+    margin-top: 50px;
 }
 .login-design-section,.login-design-section label,.login-design-section input,.login-design-section input::placeholder,.login-design-section p{
     background: #1F2937;
@@ -27,9 +28,14 @@ body{
     color: white;
 }
 
+
 @media (max-width:768px) {
     .reset-password-email-main-body{
         position: relative;
         top: 25%;
+    }
+    .sign-up-section{
+        padding-top: 0px;
+        background: #0B1120;
     }
 }

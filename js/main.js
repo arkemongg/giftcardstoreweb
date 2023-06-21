@@ -279,28 +279,32 @@ category_data.then(data=>{
 const nav_category = document.querySelector('#nav-categories')
 const nav_res_category = document.querySelector('#nav-response-categories')
 
+const url = new URL(window.location.href)
+const goto_category = url.searchParams.get('goto')
+
 nav_category.addEventListener('click',e=>{
   const categorySection = document.querySelector('.category-section');
   const windowHeight = window.innerHeight;
   const elementOffsetTop = categorySection.offsetTop;
-  const scrollPosition = elementOffsetTop - (windowHeight / 2);
+  const scrollPosition = elementOffsetTop - (windowHeight / 9);
 
   window.scrollTo({
     top: scrollPosition,
     behavior: 'smooth'
   });
 })
+console.log(goto_category);
+if(goto_category === 'categories'){
+  nav_category.click()
+  url.searchParams.delete('goto')
+  window.history.replaceState(null, null, url.origin);
+}
+
 nav_res_category.addEventListener('click',e=>{
-  const categorySection = document.querySelector('.category-section');
-  const windowHeight = window.innerHeight;
-  const elementOffsetTop = categorySection.offsetTop;
-  const scrollPosition = elementOffsetTop - (windowHeight / 2);
-
-  window.scrollTo({
-    top: scrollPosition,
-    behavior: 'smooth'
-  });
+  nav_category.click()
 })
+
+
 
 window.addEventListener('load',event=>{
   setTimeout(() => {

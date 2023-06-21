@@ -562,5 +562,6 @@ export const validatePassword = async (currentPassword, token) => {
     }
   } catch (error) {
     throw error; // Rethrow the error to handle it in the calling code
+
   }
 };
