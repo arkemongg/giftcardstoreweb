@@ -217,6 +217,27 @@
     }
 
 }
+.your-product{
+    background: rgb(30 64 175);
+}
+.your-product:hover{
+    background: rgba(30, 64, 175, 0.745);
+    
+}
+
+.your-account-details{
+    background: #1F2937;
+}
+.your-account-details:hover{
+    background: #1f2937a0;
+}
+.checkout-next-btn,.checkout-checkout,.account-page-login-sign-up{
+    background: #166534;
+}
+
+.checkout-next-btn:hover,.checkout-checkout:hover,.account-page-login-sign-up:hover{
+    background: #166534a3;
+}
 .hidden{
     display: none;
 }
