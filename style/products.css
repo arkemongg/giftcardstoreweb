@@ -34,6 +34,9 @@
     margin: 10px;
     
 }
+#search-dropdown{
+    background: #1F2937;
+}
 #nextBtn{
     min-width: 150px;
     margin: 10px;
@@ -51,10 +54,14 @@
     max-width: 145px;
     font-size: 12px;
     outline: none;
+    background: #1F2937;
+    color: white;
 }
 
 #category-select{
     max-width: 145px;
     font-size: 12px;
     outline: none;
+    background: #1F2937;
+    color: white;
 }
