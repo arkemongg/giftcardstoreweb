@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style/activation.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="activation hidden">
+            <p class="activated hidden">Your account has been activated</p>
+            <p class="failed hidden">Failed/Expired</p>
+        </div>
+        <br>
+        <div class="extras hidden">
+            <a href="http://127.0.0.1:5500/login.html">
+                <button class="middle none center mr-4 rounded-lg bg-blue-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                    Go to Login Page
+                </button>
+            </a>
+            <p class="countdown font-mono text-2xl">
+                <span class="redirect-text" style="font-size: 16px;">redirect to login page in...</span> <span class="countdown-timer" style="--value:40;">1</span>
+            </p>
+        </div>
+    </section>
+
+    <script type="module" src="/js/activation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+window.onload=function(){const e=window.location.search,o=new URLSearchParams(e).get("email");var t;null!==o?(t=o,document.querySelector(".account-created").classList.remove("hidden"),console.log(t),document.querySelector(".email-address").textContent=`${t}`,setTimeout((()=>{window.location.href="http://127.0.0.1:5500/"}),3e5)):window.location.href="http://127.0.0.1:5500/"};

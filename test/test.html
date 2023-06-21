@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Shopping Cart</title>
+  <style>
+    .cart-container {
+      transition: transform 0.3s ease;
+    }
+
+    .cart-open {
+      transform: translateX(0);
+    }
+
+    .cart-closed {
+      transform: translateX(100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="flex">
+    <div class="w-full">
+      <!-- Your website content goes here -->
+      <div class="p-8">
+        <h1 class="text-2xl font-bold mb-4">Product List</h1>
+        <!-- Product list goes here -->
+      </div>
+    </div>
+
+    <div class="w-64 bg-gray-100 fixed top-0 right-0 bottom-0 z-50 cart-container cart-closed">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-4">Shopping Cart</h2>
+        <div class="bg-white rounded-md shadow p-4">
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-lg font-medium">Product 1</div>
+            <div class="text-gray-600">$19.99</div>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-lg font-medium">Product 2</div>
+            <div class="text-gray-600">$14.99</div>
+          </div>
+          <!-- Add more products here -->
+          <div class="flex justify-end">
+            <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fixed bottom-0 right-0 z-50 m-4">
+     
+    </div>
+  </div>
+
+  <script>
+    const cartContainer = document.querySelector('.cart-container');
+    const cartToggleBtn = document.getElementById('cartToggleBtn');
+
+    cartToggleBtn.addEventListener('click', () => {
+      cartContainer.classList.toggle('cart-open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/checkout.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<!-- Header Start -->
+<header>
+    <div class="flex-header">
+                 <!-- Header Logo Area -->
+                 <div class="logo-area">
+                    <div class="logo-image">
+                        <div class="logo-img">
+                            <img src="/assets/template.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                 <!-- Header Logo Area -->
+
+          <!-- Header Nav Area -->
+
+        <div class="nav-area">
+            <div class="nav-options">
+                <ul class="nav-list">
+                    <li id="home"><a href="#">Home</a></li>
+                    <li id="nav-buy"><a href="#">Buy Gift Cards</a></li>
+                    <li id="nav-categories"><a href="#">Categories</a></li>
+                    <li id="nav-support"><a href="#">Support</a></li>
+                    <li id="nav-login-register"><a href="/login.html">Login/Register</a></li>
+                </ul>
+            </div>
+        </div>
+         <!-- Header nav Area -->
+        <div class="nav-responsive-btn">
+            <div id="nav-res-btn">
+                <img src="/assets/dropdown.png" alt="drop">
+            </div>
+        </div>
+    </div>
+
+</header>
+<!-- Header End -->
+
+<!-- NavBar-Area Responsive-->
+
+<nav>
+    <div class="nav-responsive display-none">
+        <ul class="nav-response-list display-none">
+            <li id="nav-response-home"><a href="#">Home</a></li>
+            <li id="nav-response-buy"><a href="#">Buy Gift Cards</a></li>
+            <li id="nav-response-categories"><a href="#">Categories</a></li>
+            <li id="nav-response-support"><a href="#">Support</a></li>
+            <li id="nav-response-login-register"><a href="#">Login/Register</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- NavBar-Area Responsive-->
+
+    <!-- CheckOut Details -->
+
+    <section id="checkout-section" class="">
+        <div class="checkout-header">
+            <h1 class="checkout-header text-center">CHECKOUT</h1>
+        </div>
+        <div class="checkout-options">
+            <button class="active-border options your-product py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-blue-900 bg-white border border-blue-200 hover:bg-blue-100 hover:text-blue-700 focus:z-10 focus:ring-blue-200 dark:focus:ring-blue-700 dark:bg-blue-800 dark:text-blue-400 dark:border-blue-600 dark:hover:text-white dark:hover:bg-blue-700">
+              Your Order Details
+            </button>
+            <button class="options your-account-details py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900  bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+              Account details
+            </button>
+            <button class="options checkout-checkout py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-green-900 bg-white border border-green-200 hover:bg-green-100 hover:text-green-700 focus:z-10 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-700 dark:bg-green-800 dark:text-green-400 dark:border-green-600 dark:hover:text-white dark:hover:bg-green-700">
+              Checkout
+            </button>
+        </div>
+
+        <div class="order-details-container">
+            <div class="product-container">
+          
+                <!-- <div class="product-container-card">
+                    <div class="checkout-item-img">
+                      <img src="/assets/gplay.png" alt="" style="width: 100px;">
+                    </div>
+                    <div class="checkout-item-quantity-remove">
+                      <div class="checkout-item-quantity">
+                        <select class="checkout-select bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected>1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="checkout-item-details">
+                      <div class="checkout-item-name">
+                        <p>Title : Google PlaY Gift Card $5 Google PlaY Gift Card $5</p>
+                      </div>
+                      <div class="checkout-item-price">Price : <span>$</span> <span class="checkout-item-price">509</span></div>
+                    </div>
+                    <div class="checkout-item-total" style="font-size: 14px;"><span>$</span><span class="checkout-item-total-price">90000</span></div>
+                    <div class="checkout-item-remove-btn">
+                        <img class="checkout-item-remove" src="/assets/bin.png" alt="remove">
+                    </div>
+                </div> -->
+              
+            </div>
+            <div class="total-checkout-amount-container">
+                <div class="total-checkout-amount">
+                    <div class="total-checkout-amount-title">
+                        <h1>Total : $</h1>
+                    </div>
+                    <div class="total-checkout-amount-value" >
+                        <p>0000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="next-btn">
+                <button class="checkout-next-btn focus:outline-none bg-white border border-green-200 hover:bg-green-100 focus:z-10 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-700 dark:bg-green-800 dark:border-green-600 dark:hover:text-white dark:hover:bg-green-700">
+                  Next
+                </button>
+            </div>
+        </div>
+        <div class="account-page-container hidden">
+            <button class="account-page-login-sign-up checkout-next-btn focus:outline-none bg-white border border-green-200 hover:bg-green-100 focus:z-10 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-700 dark:bg-green-800 dark:border-green-600 dark:hover:text-white dark:hover:bg-green-700">
+                Please Login / Sign Up
+            </button>
+        </div>
+        <div class="checkout-page-containers hidden">
+            <div class="checkout-page-container">
+                <div class="checkout-page-left">
+                    <div class="payment-methods">
+                        <div class="payment-method-logo">
+                            <img src="/assets/payment.png" alt="" width="40px" height="40px" style="display: inline-block">
+                            <h1 class="payment-method-text" style="display: inline-block;">
+                                Payment Method
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="payment-methods-crypto">
+                        <div class="payment-method-crypto-logo">
+                            <img src="/assets/cryptocurrencies.png" alt="" width="50px" height="50px" style="display: inline-block">
+                            <h1 class="payment-method-crypto" style="display: inline-block;">
+                                Cryptocurrency
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="checkout-page-right">
+                    <button class="checkout-create-order focus:outline-none bg-white border border-green-200 hover:bg-green-100 focus:z-10 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-700 dark:bg-green-800 dark:border-green-600 dark:hover:text-white dark:hover:bg-green-700">
+                        CREATE AN ORDER AND MAKE PAYMENT>
+                      </button>
+
+                    <div class="details-checkout-item-container">
+                        <div class="details-checkout-item-container-title">
+                            <p class="checkout-item-title-title">
+                                TITLE
+                            </p>
+                            <p class="checkout-item-title-price">
+                                PRICE
+                            </p>
+                            <p class="checkout-item-title-quantity">
+                                QTY
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="checkout-page-total-shipping-tax-container">
+                <div class="total-tax-shiping">
+                    <div class="shipping" >
+                        <p style="display: inline-block">SHIPPING</p> <span class="shpping-value"> <span>$</span>0</span>
+                    </div>
+                    <div class="tax">
+                        <P style="display: inline-block">TAX</P><span class="shpping-value"><span>$</span>0</span>
+                    </div>
+                    <div class="total">
+                        <P style="display: inline-block">TOTAL</P><span class="total-value"><span>$</span>0000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script type="module" src="/js/checkout.js"></script>
+</section>
+</body>
+</html>

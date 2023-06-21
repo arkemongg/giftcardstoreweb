@@ -1,0 +1,47 @@
+* {
+    background: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color : white;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #0B1120;
+}
+.order-details{
+    width: 375px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.order-id{
+    font-size: 36px;
+    text-align: center;
+}
+
+.order-payment{
+    font-size: 26px;
+    text-align: center;
+}
+.payment-btn{
+    margin: auto;
+    margin-top: 10px;
+}
+.redirect{
+    font-size: 20px;
+    text-align: end;
+    margin-top: 10px;
+    font-style: italic;
+    color: aqua;
+}
+.timer{
+    font-size: 30px;
+    color: aqua;
+}
+.profile-page-link{
+    text-align: center;
+    margin: 20px;
+}

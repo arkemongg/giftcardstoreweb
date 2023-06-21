@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style/account_created.css">
+</head>
+<body>
+    
+    <section class="account-created hidden">
+        <div class="email-img">
+            <img src="/assets/email.png" alt="email.png">
+        </div>
+        <div class="email">
+            <h1>An email has been sent to this email account</h1>
+            <span class="email-address"></span>
+        </div>
+        
+        <div class="verify">
+            <span>Please check spam/all mail and verify your account</span>
+        </div>
+        <a href="http://127.0.0.1:5500/login.html">
+            <button class="login checkout-next-btn focus:outline-none bg-white border border-green-200 hover:bg-green-100 focus:z-10 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-700 dark:bg-green-800 dark:border-green-600 dark:hover:text-white dark:hover:bg-green-700">
+                Login
+            </button>
+        </a>
+    </section>
+<script type="module" src="/js/account_created.js"></script>
+</body>
+</html>

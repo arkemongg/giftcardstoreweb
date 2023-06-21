@@ -1,0 +1,48 @@
+* {
+    background: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color : white;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #0B1120;
+}
+.main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.activation{
+    text-align: center;
+    font-size: 26px;
+}
+.extras{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.extras button{
+    width: 375px;
+    margin: 0px;
+}
+.countdown{
+    margin-top: 10px;
+}
+.hidden{
+    display: none;
+}
+.loading-btn-effect{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

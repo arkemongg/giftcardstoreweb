@@ -1,0 +1,23 @@
+body{
+    width: 100%;
+    height: 100%;
+    background: #111827;
+}
+
+.login-section{
+    height: 100vh;
+}
+.sign-up-section{
+    height: 100vh;
+}
+
+.reset-password-email-section{
+    height: 100vh;
+}
+
+@media (max-width:768px) {
+    .reset-password-email-main-body{
+        position: relative;
+        top: 25%;
+    }
+}

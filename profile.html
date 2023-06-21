@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/profile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,900;1,100;1,500;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="display: none">
+    <!-- Header Start -->
+    <header>
+        <div class="flex-header">
+             <!-- Header Logo Area -->
+             <div class="logo-area">
+                <div class="logo-image">
+                    <div class="logo-img">
+                        <img src="/assets/template.png" alt="">
+                    </div>
+                </div>
+            </div>
+             <!-- Header Logo Area -->
+
+              <!-- Header Nav Area -->
+
+            <div class="nav-area">
+                <div class="nav-options">
+                    <ul class="nav-list">
+                        <li id="home"><a href="/">Home</a></li>
+                        <li id="nav-buy"><a href="/products.html">Buy Gift Cards</a></li>
+                        <li id="nav-categories"><a href="#">Categories</a></li>
+                        <li id="nav-support"><a href="/support.html">Support</a></li>
+                        <li id="nav-login-register">
+                            <a href="/login.html">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <!-- Header nav Area -->
+            <div class="nav-responsive-btn">
+                <div id="nav-res-btn">
+                    <img src="/assets/dropdown.png" alt="drop">
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Header End -->
+
+    <!-- NavBar-Area Responsive-->
+
+    <nav>
+        <div class="nav-responsive display-none">
+            <ul class="nav-response-list display-none">
+                <li id="nav-response-home"><a href="/">Home</a></li>
+                <li id="nav-response-buy"><a href="/products.html">Buy Gift Cards</a></li>
+                <li id="nav-response-categories"><a href="#">Categories</a></li>
+                <li id="nav-response-support"><a href="/support.html">Support</a></li>
+                <li id="nav-response-login-register"><a href="#">profile</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- NavBar-Area Responsive-->
+
+
+    <!-- User Account Section -->
+
+    <section class="user-account">
+        <div class="text-lg">
+            <div class="user-account-details">
+                <h1 style="font-size: 36px ; display: block; text-align: center ; padding: 20px;">User Account</h1>
+                <div class="user-margin-container">
+                    <div class="user-profile-card bg-transparent">
+                        <div class="user-profile-image bg-transparent">
+                            <img src="/assets/circle logo.png" alt="user-profile-image">
+                        </div>
+                        <p class="text-black p-0 ml-5 mt-5 user-fullname" style="display: inline-block;"> Full Name : </p>
+                        <p class="text-black user-fullname-data p-0 mt-5" style="display: inline;" ></p>
+                        <br>
+                        <p class="text-black p-0 ml-5 mt-1 user-username" style="display: inline-block;"> Username : </p>
+                        <p class="text-black user-username-data p-0 mt-5" style="display: inline;" ></p>
+                        <br>
+                        <p class="text-black p-0 ml-5 mt-1 user-email" style="display: inline-block;"> Email : </p>
+                        <p class="text-black user-email-data p-0 mt-5" style="display: inline;" ></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-account-feature">
+
+            <div class="border-b border-gray-200 dark:border-gray-700">
+                <ul class="edit-profile-btn flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+                    <li class="0">
+                        <a href="#" class="inline-flex p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500 group">
+                            <svg aria-hidden="true" class="w-5 h-5 mr-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>Edit Profile
+                        </a>
+                    </li>
+                    <li class="1">
+                        <a href="#" class="inline-flex p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group" aria-current="page">
+                            <img class="w-5 h-5 mr-2 text-blue-600 dark:text-blue-500" src="/assets/shopping-bag.png"> </img>Orders
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="#" class="inline-flex p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
+                            <svg aria-hidden="true" class="w-5 h-5 mr-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path></svg>Coming Soon
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <p class="inline-flex p-2 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 dark:hover:text-gray-300 group">
+                           <img class="w-5 h-5 mr-2 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-300" src="/assets/crown.png" style="width: 30px;" alt=""> Membership <p class="membership-status"> &nbsp;</p>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="view-user-account-feature-field">
+                
+            <div id="edit-profile">
+                <form>
+                    <div class="mb-6 mt-5 flex">
+                        <label class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            Email
+                        </label>
+                        <input type="text" id="user_email" class="rounded-none cursor-not-allowed rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled>
+                    </div>
+                    <div class="mb-6 flex">
+                        <label class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            Username
+                        </label>
+                        <input type="text" id="user_name" class="rounded-none cursor-not-allowed rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled>
+                    </div>
+                    <div class="mb-6 flex">
+                        <label for="new-first-name"class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600" style="width: 100px;">
+                            First Name
+                        </label>
+                        <input type="text" id="new-first-name" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+                    <div class="mb-6 flex">
+                        <label for="new-last-name"class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600" style="width: 100px;">
+                            Last Name
+                        </label>
+                        <input type="text" id="new-last-name" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+                    </div>
+
+                    <div class="mb-6 flex">
+                        <label for="new-phone"class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            Phone
+                        </label>
+                        <input type="tel" id="new-phone" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+                    <div class="mb-6 flex">
+                        <label for="new-address"class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600" >
+                            Address
+                        </label>
+                        <input style="cursor:not-allowed;" type="text" id="new-address" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" disabled placeholder="coming soon">
+                    </div>
+                    <div class="mb-6 flex">
+                        <label for="new-birth-date"class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            Birth Date
+                        </label>
+                        <input type="date" id="new-birth-date" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+                    <div class="mb-6 flex">
+                        <label for="new-password"class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            New Password
+                        </label>
+                        <input type="password" id="new-password" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+                    <p id="password-warning" class="text-yellow-500 hidden">Password must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and be at least 8 characters long.</p>
+                    <div class="mb-6 flex">
+                        <label for="repeat-password"class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            Repeat Password
+                        </label>
+                        <input type="password" id="repeat-password" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+                    <p id="password-error" class="text-red-500 hidden">Passwords do not match</p>
+                    <div class="mb-6 flex">
+                        <label for="current-password"class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                            Current Password
+                        </label>
+                        <input type="password" id="current-password" class="rounded-none rounded-r-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    </div>
+                    <div class="edit-profile-submit-btn mt-6 text-center">
+                        <p class="profile-update-message hidden" style="font-size: 12px;">error-message</p>
+                        <button type="submit" class="update-profile text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Confirm Changes</button>
+                    </div>
+                  </form>
+            </div>
+            
+            <div class="orders-page" style="display: none;">
+                <ul class="order-list">
+                    <li class="order-list-details-title">
+                        <div class="order-list-details-tiem order-id">ORDER ID</div>
+                        <div class="order-list-details-tiem order-payemnt-status">PAYMENT STATUS</div>
+                        <div class="order-list-details-tiem order-status">ORDER STATUS</div>
+                        <div class="order-list-details-tiem order-payment-url">PAYMENT URL</div>
+                        <div class="order-list-details-tiem order-total-price">TOTAL PRICE</div>
+                        <div class="order-list-details-tiem order-created-at"> ORDER DATE </div>
+                    </li>
+                    <!-- <li class="order-list-details">
+                        <div class="order-list-details-tiem order-id">1</div>
+                        <div class="order-list-details-tiem order-payemnt-status">Pending</div>
+                        <div class="order-list-details-tiem order-status">Pending</div>
+                        <div class="order-list-details-tiem order-payment-url">-</div>
+                        <div class="order-list-details-tiem order-total-price"><span>$</span> 8.99</div>
+                        <div class="order-list-details-tiem order-created-at"> 12/13/20 </div>
+                    </li> -->
+                </ul>
+                <div class="load-more-btn">
+                    <button class="load-more hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Load More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="order-items-container" style="display: none;">
+    <div class="blurry-background">
+        <div class="order-items-from-orders">
+            <button class="order-items-hide-btn" style="position: relative; left:330px; font-size: 20px;"><p>x</p></button>
+            <div class="order-items-order-id" style="text-align: center;">Order Id : 14</div>
+            <ul class="order-items-items">
+                <li class="order-items-item" style="font-size: 10px;">
+                    <div class="order-items-item-details order-item-title">ITEM TITLE</div>
+                    <div class="order-items-item-details order-item-price">ITEM PRICE</div>
+                    <div class="order-items-item-details order-item-quantity">QTY</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- User Account Section -->
+
+    <!-- User Profile Settings -->
+
+    <!-- User profile Settings -->
+
+<script type="module" src="/js/profile.js"></script>
+</section>
+</body>
+</html>
