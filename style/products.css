@@ -32,7 +32,6 @@
 #prevBtn {
     min-width: 150px;
     margin: 10px;
-    
 }
 #search-dropdown{
     background: #1F2937;
@@ -56,6 +55,7 @@
     outline: none;
     background: #1F2937;
     color: white;
+    border-radius: 0;
 }
 
 #category-select{
@@ -64,4 +64,26 @@
     outline: none;
     background: #1F2937;
     color: white;
+    border-radius: 0;
+}
+
+
+@media (max-width: 660px) {
+   
+    .flex-area{
+       height: 100px;
+       flex-wrap: wrap;
+       flex-grow: 1;
+    }
+    #items-per-page{
+        max-width: 49%;
+        height: 50px;
+        border-radius: 0;
+    }
+    #category-select{
+        max-width: 50%;
+        height: 50px;
+        border-radius: 0;
+        margin-left: 2px;
+    }
 }
