@@ -346,7 +346,7 @@ update_profile_btn.addEventListener('click',event=>{
                     }, 3000);
                 }, 1000);
             }else {
-                
+                console.log(response);
                 setTimeout(() => {
                     document.body.removeChild(loading_element)
                     message.style.color = 'red'

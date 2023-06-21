@@ -212,7 +212,7 @@ export function createOrderSummary(name, quantity, total) {
   // Create the HTML code using template literals
   const html = `
       <h1 class="" style="font-size: 36px; margin-top: 20px; margin-bottom: 20px;">Order Summary</h1>
-      <button class="proceed-to-payment-buy-now py-2.5 px-5 text-green-900 focus:outline-none bg-white border border-green-200 hover:bg-green-100 hover:text-green-700 focus:z-10 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-700 dark:bg-green-800 dark:text-green-400 dark:border-green-600 dark:hover:text-white dark:hover:bg-green-700">
+      <button class="proceed-to-payment-buy-now py-2.5 px-5 text-green-900 focus:outline-none border border-green-200 hover:bg-green-100 hover:text-green-700 focus:z-10 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-700 dark:bg-green-800 dark:text-green-400 dark:border-green-600 dark:hover:text-white dark:hover:bg-green-700">
           <span class="proceed-to-payment-text">
              CREATE AN ORDER AND MAKE PAYMENT>
           </span>
@@ -315,7 +315,7 @@ export function createProductContainerCard(quantity, title, price, totalPrice,im
   const quantityDiv = document.createElement('div');
   quantityDiv.classList.add('checkout-item-quantity');
   const select = document.createElement('select');
-  select.classList.add('checkout-select', 'bg-gray-50', 'border', 'border-gray-300', 'text-gray-900', 'rounded-lg', 'focus:ring-blue-500', 'focus:border-blue-500', 'block', 'dark:bg-gray-700', 'dark:border-gray-600', 'dark:placeholder-gray-400', 'dark:text-white', 'dark:focus:ring-blue-500', 'dark:focus:border-blue-500');
+  select.classList.add('checkout-select', 'bg-gray-50', 'border', 'border-gray-300', 'text-white', 'rounded-lg', 'focus:ring-blue-500', 'focus:border-blue-500', 'block', 'bg-gray-700', 'border-gray-600', 'text-white', 'focus:ring-blue-500', 'focus:border-blue-500');
   for (let i = 1; i <= 5; i++) {
     const option = document.createElement('option');
     option.value = i;
