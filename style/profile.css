@@ -2,7 +2,6 @@
 .user-account{
     background: #111827;
     max-width: 1000px;
-    height: 2000px;
     margin: auto;
 }
 .user-margin-container{
@@ -64,7 +63,7 @@
 
 .view-user-account-feature-field{
     width: 80%;
-    min-height: 1000px;
+    min-height: 700px;
     margin: auto;
 }
 
@@ -84,7 +83,7 @@
 }
 .orders-page{
     width: 100%;
-    min-height: 750px;
+    min-height: 700px;
     background-color: #1f213700;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 22px 70px 4px;
   }
@@ -182,6 +181,7 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    padding-bottom: 10px;
 }
 #password-warning,#password-error{
     font-size: 10px;

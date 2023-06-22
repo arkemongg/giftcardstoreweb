@@ -615,6 +615,15 @@ width: 290px;
     flex-wrap: wrap;  
 }
 
+#password-warning{
+    color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+#password-error,#username-warning,#email-warning{
+    color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+
 @media (max-height:700px){
     .fixed-bottom-right {
         position: fixed;

@@ -79,6 +79,15 @@ export function cart_inside_design(flag = false){
               .then(response => {
                 if (response.ok) {
                   console.log('Item deleted successfully.');
+                  const cart_details_area = document.querySelector('.flex-cart-list')
+                
+                  if(cart_details_area.childElementCount===0){
+                    cart_details_area.innerHTML= `
+        
+                    <h1 style="font-size: 30px; margin: auto;margin-top:50%; width:100px">Empty</h1>
+          
+                    `
+                  }
                 } else {
                   console.error('Error deleting item.');
                 }
@@ -94,6 +103,15 @@ export function cart_inside_design(flag = false){
   if(cart_id!==null){
     const cart_details = fetchData(`${api_url}/api/carts/${cart_id}/items`)
     cart_details.then(data=>{
+        
+        if(data.length===0){
+          const cart_details_area = document.querySelector('.flex-cart-list')
+          cart_details_area.innerHTML= `
+
+          <h1 style="font-size: 30px; margin: auto;margin-top:50%; width:100px">Empty</h1>
+
+          `
+        }
         const items = data
         const cart_count = document.querySelector('.cart-count')
         cart_count.textContent = items.length

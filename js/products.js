@@ -107,6 +107,14 @@ function loadInitialData(url) {
           add_To_cart(e);
         });
 
+        if(product.inventory===0){
+          buy_now.disabled = true
+          buy_now.textContent = 'Out of Stock'
+
+          addToCart.disabled = true
+          addToCart.textContent = 'Out of Stock'
+        }
+
         product_template.setAttribute('id', `${product.id}`);
         cards.appendChild(product_template);
       });

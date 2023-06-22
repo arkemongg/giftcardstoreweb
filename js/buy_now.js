@@ -31,13 +31,32 @@ product_data.then(data=>{
     const total_checkout_dom = document.querySelector('.total-checkout-amount-value')
     total_checkout_dom.textContent = total_checkout.toFixed(2)
     select.forEach(s=>{
-        
         s.addEventListener('change',event=>{
             const targetedCard = event.target.closest('.product-container-card')
-            
             const new_price = targetedCard.querySelector('.checkout-item-total-price')
 
             total_checkout = (event.target.value * data.price).toFixed(2)
+
+            const title =  event.target.closest('.product-container-card').querySelector('.checkout-item-name')
+            if(data.inventory===0 || data.inventory<event.target.value){
+                const btns = document.querySelectorAll(".checkout-options button")
+                btns.forEach(btn=>{
+                    btn.disabled = true
+                }) 
+                title.textContent = 'OutOfStock'
+                title.style.color = 'red'
+            }else{
+                const btns = document.querySelectorAll(".checkout-options button")
+                if(access_token === null || access_token===undefined){
+                    btns[0].disabled = false
+                    btns[1].disabled = false
+                }else{
+                    btns[0].disabled = false
+                    btns[2].disabled = false
+                }
+                title.textContent = data.title
+                title.style.color = 'white'
+            }
             
             new_price.textContent = total_checkout
 
@@ -62,6 +81,7 @@ product_data.then(data=>{
             disableBtns()
     })
     disableBtns()
+
 }).catch(error=>{
     console.log(error);
     const btns = document.querySelectorAll(".checkout-options button")

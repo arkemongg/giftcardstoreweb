@@ -19,7 +19,6 @@ const cart_data = fetchData(`http://127.0.0.1:8000/api/carts/${cart_id}/`)
 let total_checkout = 0;
 cart_data.then(data=>{
     data.items.forEach(item=>{
-        console.log(item);
         const quantity = item.quantity;
         const title = item.product.title;
         const price = item.product.price;
