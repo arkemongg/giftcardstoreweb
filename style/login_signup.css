@@ -5,7 +5,8 @@ body{
 }
 
 .login-section{
-    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background: #0B1120;
 }
 .sign-up-section{

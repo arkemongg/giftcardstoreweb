@@ -2,14 +2,16 @@ import {loading_element} from './templates.js'
 import {validate_user_update_design} from './validate_user.js'
 import { header_responsvie_nav } from './header.js';
 import {resetPasswordConfirm, reset_password_email} from './data_request.js'
+import { domain_url,api_url } from './urls.js';
 document.body.appendChild(loading_element)
+
 
 validate_user_update_design();
 header_responsvie_nav();
 
 const url = window.location.href
 
-if(url === 'http://127.0.0.1:5500/password_reset.html'){
+if(url === `${domain_url}/password_reset.html`){
     const email_area = document.querySelector('.reset-password-email-section')
     email_area.classList.remove('hidden')
 
@@ -164,8 +166,8 @@ if(url === 'http://127.0.0.1:5500/password_reset.html'){
                     document.body.removeChild(loading_element)
                     const form = document.querySelector('.form-two')
                     form.innerHTML = `<h1 >Password Successfully Changed</h1> <br>
-                    <a href="http://127.0.0.1:5500/login.html">
-                        <button onclick="event.preventDefault(); window.location.href='http://127.0.0.1:5500/login.html';" class="w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login</button>
+                    <a href="${domain_url}/login.html">
+                        <button onclick="event.preventDefault(); window.location.href='${domain_url}/login.html';" class="w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login</button>
                     </a>
                     `
                 }).catch(err=>{
@@ -204,6 +206,9 @@ if(url === 'http://127.0.0.1:5500/password_reset.html'){
     }
 }   
 
+
 window.addEventListener('load',event=>{
-    document.body.removeChild(loading_element)
-})
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
+  })

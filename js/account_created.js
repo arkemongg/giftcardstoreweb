@@ -1,4 +1,7 @@
+import {domain_url} from './urls.js'
+import { loading_element } from './templates.js';
 
+document.body.appendChild(loading_element)
 
 function account_created(account_data){
     const  section = document.querySelector('.account-created');
@@ -9,7 +12,7 @@ function account_created(account_data){
     email_address.textContent = `${account_data}`
 
     setTimeout(() => {
-        window.location.href = "http://127.0.0.1:5500/"
+        window.location.href = `${domain_url}`
     }, 300000);
 }
 
@@ -22,7 +25,7 @@ function call_account_created(){
         if(email!==null){
             account_created(email)
         }else{
-            window.location.href = "http://127.0.0.1:5500/"
+            window.location.href = `${domain_url}`
         }
       };
 
@@ -30,3 +33,10 @@ function call_account_created(){
 }
 
 call_account_created()
+
+
+window.addEventListener('load',event=>{
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
+  })

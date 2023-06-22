@@ -1,6 +1,8 @@
 import { loading_element } from './templates.js';
 import { api_url, domain_url } from './urls.js';
 
+document.body.appendChild(loading_element)
+
 const activation = document.querySelector('.activation')
 function activateUser(uid, token) {
     document.body.appendChild(loading_element)
@@ -26,18 +28,11 @@ function activateUser(uid, token) {
         return response.json();
       })
       .then(result => {
-        setTimeout(() => {
-            document.body.removeChild(loading_element)
-        }, 1000);
         console.log("y");
         activation.querySelector('.activated').classList.remove('hidden')
       })
       .catch(error => {
         console.log("n");
-
-        setTimeout(() => {
-            document.body.removeChild(loading_element)
-        }, 1000);
         activation.querySelector('.failed').classList.remove('hidden')
       });
   }
@@ -73,3 +68,10 @@ function activateUser(uid, token) {
       
       const duration = 30;
       startCountdown(duration);
+
+
+      window.addEventListener('load',event=>{
+        setTimeout(() => {
+          document.body.removeChild(loading_element)
+        }, 1000);
+      })

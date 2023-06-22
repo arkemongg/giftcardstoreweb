@@ -1,3 +1,5 @@
+import { domain_url,api_url } from "./urls.js"
+
 export function request_data(method,url,header_type,error_massage,data){
     return new Promise((resolve,reject)=>{
         const request = new XMLHttpRequest()
@@ -101,7 +103,7 @@ export async function fetchData(url) {
 export function get_cart(){
     return new Promise((resolve,reject)=>{
         const request = new XMLHttpRequest()
-        request.open('POST','http://127.0.0.1:8000/api/carts/',true)
+        request.open('POST',`${api_url}/api/carts/`,true)
         request.setRequestHeader('Content-Type','applicaton/json')
         request.send()
         request.onload = function(){
@@ -117,7 +119,7 @@ export function get_cart(){
 
 export async function add_to_cart(cart_id, product_id, quantity) {
   try {
-    const response = await fetch(`http://127.0.0.1:8000/api/carts/${cart_id}/items/`, {
+    const response = await fetch(`${api_url}/api/carts/${cart_id}/items/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -144,7 +146,7 @@ export async function add_to_cart(cart_id, product_id, quantity) {
 }
 
 export async function createOrder(accessToken, cartId) {
-  const url = 'http://127.0.0.1:8000/api/orders/';
+  const url = `${api_url}/api/orders/`;
 
   try {
     const response = await fetch(url, {
@@ -197,7 +199,7 @@ export function postDataNoAUTH(url, data) {
 
 export function createUser(username, password, confirmPassword, email) {
   return new Promise(async (resolve, reject) => {
-    const url = 'http://127.0.0.1:8000/auth/users/';
+    const url = `${api_url}/auth/users/`;
 
     const userData = {
       username: username,
@@ -228,7 +230,7 @@ export function createUser(username, password, confirmPassword, email) {
 
 export function reset_password_email(email) {
   return new Promise(async (resolve, reject) => {
-    const url = 'http://127.0.0.1:8000/auth/users/reset_password/';
+    const url = `${api_url}/auth/users/reset_password/`;
 
     const emailData = {
       email: email
@@ -262,7 +264,7 @@ export function reset_password_email(email) {
 
 export function resetPasswordConfirm(uid, token, newPassword) {
   return new Promise(async (resolve, reject) => {
-    const url = 'http://127.0.0.1:8000/auth/users/reset_password_confirm/';
+    const url = `${api_url}/auth/users/reset_password_confirm/`;
 
     const requestData = {
       uid: uid,

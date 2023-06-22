@@ -1,6 +1,10 @@
 import { header_responsvie_nav } from './header.js';
 import { validate_user_update_design } from './validate_user.js';
-import { createLoadingElement } from './templates.js';
+import { loading_element,createLoadingElement } from './templates.js';
+import { api_url, domain_url } from './urls.js';
+
+document.body.appendChild(loading_element)
+
  validate_user_update_design();
 
  header_responsvie_nav();
@@ -11,7 +15,6 @@ import { createLoadingElement } from './templates.js';
   const sign_in_btn_post = document.querySelector('.sign-in-btn-post')
   const warning_sign_in = document.querySelector('.waring-sign-in')
   
-  const loading_element = createLoadingElement()
   
   async function jwt_create(username, password) {
     const loginData = {
@@ -20,7 +23,7 @@ import { createLoadingElement } from './templates.js';
     };
   
     try {
-      const response = await fetch('http://127.0.0.1:8000/auth/jwt/create/', {
+      const response = await fetch(`${api_url}/auth/jwt/create/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,14 +35,12 @@ import { createLoadingElement } from './templates.js';
   
       if (data.access) {
         localStorage.setItem('accessToken', data.access);
-        const loading_element = createLoadingElement();
         document.body.appendChild(loading_element);
         setTimeout(() => {
           document.body.removeChild(loading_element);
-          window.location.href = 'http://127.0.0.1:5500/profile.html';
+          window.location.href = `${domain_url}/profile.html`;
         }, 1000);
       } else {
-        const loading_element = createLoadingElement();
         document.body.appendChild(loading_element);
         setTimeout(() => {
           document.body.removeChild(loading_element);
@@ -64,6 +65,13 @@ import { createLoadingElement } from './templates.js';
   } else {
     jwt_create(username, password);
   }
+  })
+
+
+window.addEventListener('load',event=>{
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
   })
 
   

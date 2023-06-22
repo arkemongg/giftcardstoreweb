@@ -1,11 +1,14 @@
 import { request_data } from "./data_request.js";
+import { domain_url,api_url } from "./urls.js";
 
-if (window.location.href === 'http://127.0.0.1:5500/order_created.html') {
-  const allowedReferrer = 'http://127.0.0.1:5500/checkout.html';
-  const allowedReferrerTwo = 'http://127.0.0.1:5500/buynow.html';
+document.body.appendChild(loading_element)
+
+if (window.location.href === `${domain_url}/order_created.html`) {
+  const allowedReferrer = `${domain_url}/checkout.html`;
+  const allowedReferrerTwo = `${domain_url}/buynow.html`;
 
   if (!document.referrer.includes(allowedReferrer) && !document.referrer.includes(allowedReferrerTwo)) {
-    window.location.href = 'http://127.0.0.1:5500/profile.html';
+    window.location.href = `${domain_url}/profile.html`;
   }else{
       
   const order_id = document.querySelector('.order-id')
@@ -13,7 +16,7 @@ if (window.location.href === 'http://127.0.0.1:5500/order_created.html') {
 
   const profile_redirect = document.querySelector('.redirect')
 
-  const last_order_data = request_data("GET",'http://127.0.0.1:8000/api/orders/last_order/','USER',"Hmm....")
+  const last_order_data = request_data("GET",`${api_url}/api/orders/last_order/`,'USER',"Hmm....")
 
   last_order_data.then(data=>{
       order_id.innerHTML= `ORDER #${data.pk}`
@@ -26,7 +29,7 @@ if (window.location.href === 'http://127.0.0.1:5500/order_created.html') {
         Click Here to go to the profile page
     </button>`
   profile_page.addEventListener('click',e=>{
-    window.location.href = 'http://127.0.0.1:5500/profile.html';
+    window.location.href = `${domain_url}/profile.html`;
   })
 
 
@@ -40,12 +43,17 @@ if (window.location.href === 'http://127.0.0.1:5500/order_created.html') {
 
     if (countdown === 0) {
       clearInterval(timer);
-      window.location.href = 'http://127.0.0.1:5500/profile.html';
+      window.location.href = `${domain_url}/profile.html`;
     }
   }, 1000);
   }
 }
 
+window.addEventListener('load',event=>{
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
+  })
 
 
 

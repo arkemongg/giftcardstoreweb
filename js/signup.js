@@ -1,10 +1,11 @@
 import { header_responsvie_nav } from './header.js';
 import { validate_user_update_design } from './validate_user.js';
-import { createLoadingElement } from './templates.js';
+import { loading_element } from './templates.js';
 import { createUser } from './data_request.js';
+import { domain_url } from './urls.js';
 
-const loading_element = createLoadingElement()
 document.body.appendChild(loading_element)
+
 
 header_responsvie_nav();
 validate_user_update_design();
@@ -168,7 +169,7 @@ function validate_password() {
         createUser(username_data,password_data,confirm_password_data,email_data)
         .then(data=>{
           document.body.removeChild(loading_element)
-          window.location.href = `http://127.0.0.1:5500/account_created.html?email=${email_data}`
+          window.location.href = `${domain_url}/account_created.html?email=${email_data}`
         })
         .catch(error=>{
             error.then(err=>{
@@ -201,4 +202,8 @@ function validate_password() {
   })
 
 
-  
+window.addEventListener('load',event=>{
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
+  })

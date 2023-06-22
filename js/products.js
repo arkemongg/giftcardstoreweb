@@ -5,7 +5,8 @@ import { validate_user_update_design } from './validate_user.js';
 import { cart_design , cart_inside_design,add_to_cart_btn} from './cart.js';
 import { api_url, domain_url } from './urls.js';
 
-//document.body.appendChild(loading_element)
+document.body.appendChild(loading_element)
+
 
 header_responsvie_nav();
 validate_user_update_design();
@@ -132,11 +133,9 @@ function loadInitialData(url) {
       }else{
         nextButton.style.cursor = 'pointer';
       }
-      document.body.removeChild(loading_element);
     })
     .catch(err => {
       console.log(err);
-      document.body.removeChild(loading_element);
     });
 
 }
@@ -231,3 +230,10 @@ const nav_category = document.querySelector('#nav-categories')
 nav_category.addEventListener('click',e=>{
   category_select.focus();
 })
+
+
+window.addEventListener('load',event=>{
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
+  })

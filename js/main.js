@@ -325,7 +325,7 @@ nav_res_category.addEventListener('click',e=>{
 window.addEventListener('load',event=>{
   setTimeout(() => {
     document.body.removeChild(loading_element)
-  }, 500);
+  }, 1000);
 })
 
 // npx tailwindcss -i ./style/input.css -o ./style/output.css --watch

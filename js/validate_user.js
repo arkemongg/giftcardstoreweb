@@ -1,4 +1,5 @@
 import { profileLogout,createResponsiveProfileElements,createLoadingElement } from "./templates.js";
+import { api_url, domain_url } from "./urls.js";
 
 export function validate_user() {
     return new Promise((resolve, reject) => {
@@ -6,7 +7,7 @@ export function validate_user() {
       console.log(accessToken);
       if (accessToken !== 'undefined' && accessToken !== null) {
         const request = new XMLHttpRequest();
-        request.open("GET", "http://127.0.0.1:8000/auth/users", true);
+        request.open("GET", `${api_url}/auth/users`, true);
         request.setRequestHeader("Authorization", `JWT ${accessToken}`);
         request.send();
         request.onload = function () {
@@ -80,7 +81,7 @@ export function validate_customer(){
   return new Promise((resolve,reject)=>{
       const accessToken = localStorage.getItem('accessToken');
       const request = new XMLHttpRequest();
-      request.open("GET", "http://127.0.0.1:8000/api/customer", true);
+      request.open("GET", `${api_url}/api/customer`, true);
       request.setRequestHeader("Authorization", `JWT ${accessToken}`);
       request.send()
       request.onload = function(){
@@ -107,7 +108,7 @@ body.addEventListener('click', event => {
   if (event.target.classList.contains('logout')) {
     document.body.appendChild(loading_element)
     localStorage.removeItem('accessToken')
-    const newUrl = 'http://127.0.0.1:5500/';
+    const newUrl = `${domain_url}`;
     setTimeout(() => {
       window.location.href = newUrl;
     }, 1000);

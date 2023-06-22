@@ -2,14 +2,12 @@ import { header_responsvie_nav } from './header.js';
 import { validate_user , validate_user_update_design , validate_customer} from './validate_user.js';
 import { request_data } from './data_request.js';
 import {generateOrderListItem,createListItem,loading_element,validatePassword} from './templates.js'
-import { api_url } from './urls.js';
+import { api_url,domain_url } from './urls.js';
+document.body.appendChild(loading_element)
+
 header_responsvie_nav();
 validate_user_update_design();
 
-document.body.appendChild(loading_element)
-window.addEventListener('load',event=>{
-    document.body.removeChild(loading_element)
-})
 
 const edit_profile_btn = document.querySelector('.edit-profile-btn')
 const user_account_details_fields = document.querySelector('.view-user-account-feature-field')
@@ -76,7 +74,7 @@ validate_customer()
     birth_date.value = data.birth_date
 })
 
-const order_data = request_data('GET','http://127.0.0.1:8000/api/orders/','USER',"can't fetch the order")
+const order_data = request_data('GET',`${api_url}/api/orders/`,'USER',"can't fetch the order")
 
 function status(status){
     let x = "";
@@ -148,7 +146,7 @@ order_list.addEventListener('click',e=>{
         document.body.appendChild(loading_element)
         const order_id = document.querySelector('.order-items-order-id')
         order_id.innerHTML = `ORDER ID : ${e.target.textContent}`
-        const order_items_data = request_data('GET',`http://127.0.0.1:8000/api/orders/${e.target.textContent}/`,'USER',"can't fetch the order")
+        const order_items_data = request_data('GET',`${api_url}/api/orders/${e.target.textContent}/`,'USER',"can't fetch the order")
         order_items_data.then(data=>{
             data.items.forEach(item=>{
                 const title  = item.product.title
@@ -369,3 +367,10 @@ update_profile_btn.addEventListener('click',event=>{
     }
     
 })
+
+
+window.addEventListener('load',event=>{
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
+  })

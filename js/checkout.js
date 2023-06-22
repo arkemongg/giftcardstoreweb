@@ -1,7 +1,11 @@
 import { validate_user_update_design } from "./validate_user.js";
 import { header_responsvie_nav } from "./header.js";
 import { get_cart,fetchData,add_to_cart,createOrder, request_data } from "./data_request.js";
-import { createBuyNowProduct,createCheckoutItemTitle,createProductContainerCard } from "./templates.js";
+import { createBuyNowProduct,createCheckoutItemTitle,createProductContainerCard,loading_element } from "./templates.js";
+import { api_url,domain_url } from "./urls.js";
+
+document.body.appendChild(loading_element)
+
 
 header_responsvie_nav()
 validate_user_update_design()
@@ -10,7 +14,7 @@ const params = new URLSearchParams(url.search);
 const cart_id = params.get("cart_id");
 
 const productContainer = document.querySelector('.product-container')
-const cart_data = fetchData(`http://127.0.0.1:8000/api/carts/${cart_id}/`)
+const cart_data = fetchData(`${api_url}/api/carts/${cart_id}/`)
 
 
 
@@ -52,7 +56,7 @@ cart_data.then(data=>{
             }
             const itemId = event.target.id;
 
-            fetch(`http://127.0.0.1:8000/api/carts/${cart_id}/items/${itemId}/`, {
+            fetch(`${api_url}/api/carts/${cart_id}/items/${itemId}/`, {
                 method: 'PATCH',
                 headers: {
                   'Content-Type': 'application/json'
@@ -85,7 +89,7 @@ cart_data.then(data=>{
             const delete_item_id = s.querySelector('select').getAttribute('id')
             total_checkout -= deleted_total
             
-            fetch(`http://127.0.0.1:8000/api/carts/${cart_id}/items/${delete_item_id}/`, {
+            fetch(`${api_url}/api/carts/${cart_id}/items/${delete_item_id}/`, {
                 method: 'DELETE'
               })
                 .then(response => {
@@ -162,6 +166,7 @@ order_details_btn.addEventListener('click',e=>{
 })
 
 checkout_btn.addEventListener('click',e=>{
+    document.body.appendChild(loading_element)
     checkout_btn.disabled = true;
     order_details_btn.disabled = false
     order_details_btn.classList.remove('active-border')
@@ -171,7 +176,7 @@ checkout_btn.addEventListener('click',e=>{
     checkoutContainer.classList.remove('hidden')
     const total_tax_shipping = document.querySelector('.total-tax-shiping .total-value')
     let total_tax = 0;
-    const cart_data = fetchData(`http://127.0.0.1:8000/api/carts/${cart_id}/`)
+    const cart_data = fetchData(`${api_url}/api/carts/${cart_id}/`)
     cart_data
     .then(data=>{
         data.items.forEach(item=>{
@@ -183,9 +188,14 @@ checkout_btn.addEventListener('click',e=>{
             checkoutItemContainer.appendChild(html)
         })
         total_tax_shipping.textContent = '$'+ total_tax.toFixed(2)
+        setTimeout(() => {
+        document.body.removeChild(loading_element)
+        }, 1000);
     }).catch(error=>{
         console.log('error');
     })
+
+    
     
 })
 
@@ -213,14 +223,22 @@ next_btn.addEventListener('click',event=>{
 const loginSignUpButton = document.querySelector('.account-page-login-sign-up')
 
 loginSignUpButton.addEventListener('click', () => {
-    window.location.href = 'http://127.0.0.1:5500/login.html';
+    window.location.href = `${domain_url}/login.html`;
   });
 
 const create_order_btn = document.querySelector('.checkout-create-order')
 create_order_btn.addEventListener('click',event=>{
     createOrder(access_token,cart_id)
     .then(data=>{
-        window.location.href = "http://127.0.0.1:5500/order_created.html"
+        window.location.href = `${domain_url}/order_created.html`
     })
     localStorage.removeItem('cart_id')
 })
+
+
+window.addEventListener('load',event=>{
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
+  })
+

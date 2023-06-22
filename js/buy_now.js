@@ -1,8 +1,10 @@
 import { validate_user_update_design } from "./validate_user.js";
 import { header_responsvie_nav } from "./header.js";
 import { get_cart,fetchData,add_to_cart,createOrder, request_data,postDataNoAUTH} from "./data_request.js";
-import { createBuyNowProduct,createCheckoutItemTitle,createProductContainerCard } from "./templates.js";
-import { api_url } from "./urls.js";
+import { createBuyNowProduct,createCheckoutItemTitle,createProductContainerCard,loading_element } from "./templates.js";
+import { api_url, domain_url } from "./urls.js";
+
+document.body.appendChild(loading_element)
 
 header_responsvie_nav()
 validate_user_update_design()
@@ -138,6 +140,7 @@ order_details_btn.addEventListener('click',e=>{
 })
 
 checkout_btn.addEventListener('click',e=>{
+    document.body.appendChild(loading_element)
     checkout_btn.disabled = true;
     order_details_btn.disabled = false
     order_details_btn.classList.remove('active-border')
@@ -159,6 +162,9 @@ checkout_btn.addEventListener('click',e=>{
     const create_order_btn = document.querySelector('.checkout-create-order')
 
     create_order_btn.setAttribute('id',quantity)
+    setTimeout(() => {
+        document.body.removeChild(loading_element)
+      }, 1000);
 })
 
 your_account_details.addEventListener('click',e=>{
@@ -185,14 +191,14 @@ next_btn.addEventListener('click',event=>{
 const loginSignUpButton = document.querySelector('.account-page-login-sign-up')
 
 loginSignUpButton.addEventListener('click', () => {
-    window.location.href = 'http://127.0.0.1:5500/login.html';
+    window.location.href = `${domain_url}/login.html`;
   });
 
 const create_order_btn = document.querySelector('.checkout-create-order')
 create_order_btn.addEventListener('click',event=>{
     get_cart()
     .then(cartdata=>{
-        const url = `http://127.0.0.1:8000/api/carts/${cartdata.id}/items/`
+        const url = `${api_url}/api/carts/${cartdata.id}/items/`
         const jsondata = {
             "product_id": product_id,
             "quantity": create_order_btn.getAttribute('id')
@@ -201,8 +207,15 @@ create_order_btn.addEventListener('click',event=>{
         .then(data =>{
             createOrder(access_token,cartdata.id)
             .then(data=>{
-                window.location.href = "http://127.0.0.1:5500/order_created.html"
+                window.location.href = `${domain_url}/order_created.html`
             })
         })
     })
 })
+
+
+window.addEventListener('load',event=>{
+    setTimeout(() => {
+      document.body.removeChild(loading_element)
+    }, 1000);
+  })
