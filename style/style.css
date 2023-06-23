@@ -1,15 +1,4 @@
-.loading-btn-effect{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 body{
     background: #000;
 }
@@ -567,9 +556,6 @@ nav{
 
 /* loading effect */
 
-  .loading-btn-effect{
-    z-index: 9999999999999999999999999999999;
-  }
 
 
 /* logout area */
@@ -664,4 +650,24 @@ nav{
 }
 .hidden {
     display: none;
+}
+
+
+.loading-btn-effect{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 99999999999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+@supports not (backdrop-filter: blur(10px)) {
+    .loading-btn-effect {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }

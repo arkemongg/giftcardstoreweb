@@ -133,11 +133,16 @@ function loadInitialData(url) {
       }else{
         nextButton.style.cursor = 'pointer';
       }
+      
+        setTimeout(() => {
+          document.body.removeChild(loading_element)
+        }, 1000);
+      
     })
     .catch(err => {
       console.log(err);
     });
-
+    
 }
 loadInitialData(url)
 
@@ -182,7 +187,7 @@ if(limitValue!==null){
 items_per_page.addEventListener('input',event=>{
   
   if(event.target.value>0 && event.target.value<=32){
-    console.log(event.target.value);
+    
     const currentUrl = new URL(window.location.href);
     const limitValue = event.target.value;
     currentUrl.searchParams.set('limit', limitValue);

@@ -12,7 +12,7 @@
     width: 100%;
     min-height: 400px;
     margin: auto;
-    background: #2b3a50;
+    background-image: linear-gradient(to bottom, #1F2937 0%, #0b11205b 80%);
     overflow: hidden;
 }
 
