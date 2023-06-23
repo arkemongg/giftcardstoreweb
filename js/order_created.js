@@ -1,5 +1,6 @@
 import { request_data } from "./data_request.js";
 import { domain_url,api_url } from "./urls.js";
+import { loading_element } from "./templates.js";
 
 document.body.appendChild(loading_element)
 
