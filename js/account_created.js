@@ -6,7 +6,7 @@ document.body.appendChild(loading_element)
 function account_created(account_data){
     const  section = document.querySelector('.account-created');
     section.classList.remove('hidden')
-    console.log(account_data);
+    //console.log(account_data);
     const email_address = document.querySelector('.email-address')
 
     email_address.textContent = `${account_data}`

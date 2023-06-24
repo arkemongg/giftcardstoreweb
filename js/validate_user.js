@@ -4,7 +4,7 @@ import { api_url, domain_url } from "./urls.js";
 export function validate_user() {
     return new Promise((resolve, reject) => {
       const accessToken = localStorage.getItem('accessToken');
-      console.log(accessToken);
+      //console.log(accessToken);
       if (accessToken !== 'undefined' && accessToken !== null) {
         const request = new XMLHttpRequest();
         request.open("GET", `${api_url}/auth/users`, true);
@@ -32,7 +32,7 @@ export function validate_user() {
 export function validate_user_update_design(){
 validate_user()
   .then((user) => {
-    console.log(user);
+    //console.log(user);
    document.querySelector('body').style.display = 'block'
    const nav_login_register = document.querySelector('#nav-login-register')
    const nav_login_register_responsive = document.querySelector('#nav-response-login-register')

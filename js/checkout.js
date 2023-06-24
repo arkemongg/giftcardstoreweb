@@ -67,7 +67,7 @@ cart_data.then(data=>{
                   
                 })
                 .catch(error => {
-                  console.log('Error:', error);
+                  //console.log('Error:', error);
                 });
         })  
     })
@@ -94,15 +94,15 @@ cart_data.then(data=>{
               })
                 .then(response => {
                   if (response.ok) {
-                    console.log('DELETE request successful');
+                    //console.log('DELETE request successful');
                   } else {
 
-                    console.log('DELETE request failed');
+                    //console.log('DELETE request failed');
                   }
                 })
                 .catch(error => {
 
-                  console.log('Error:', error);
+                  //console.log('Error:', error);
                 });
                 total_checkout_dom.textContent = total_checkout.toFixed(2)
             }
@@ -192,7 +192,7 @@ checkout_btn.addEventListener('click',e=>{
         document.body.removeChild(loading_element)
         }, 1000);
     }).catch(error=>{
-        console.log('error');
+        //console.log('error');
     })
 
     

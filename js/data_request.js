@@ -130,11 +130,11 @@ export async function add_to_cart(cart_id, product_id, quantity) {
       })
     });
 
-    console.log(response);
+    //console.log(response);
 
     if (response.ok) {
       const data = await response.json(); // You can also use response.text() or other formats depending on the response
-      console.log(data);
+      //console.log(data);
       return data; // Return the data to be used with .then method
     } else {
       throw new Error('Error: ' + response.status);
@@ -160,14 +160,14 @@ export async function createOrder(accessToken, cartId) {
       })
     });
 
-    console.log("ok")
+    //console.log("ok")
 
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       return data;
     } else {
-      console.log(response);
+      //console.log(response);
       throw new Error('Error: ' + response.status);
     }
   } catch (error) {

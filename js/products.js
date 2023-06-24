@@ -63,7 +63,7 @@ category_data.then(data=>{
 
 category_select.addEventListener('input',event=>{
   const items_per_page = document.getElementById('items-per-page')
-  console.log(items_per_page.value);
+  //console.log(items_per_page.value);
   if(event.target.value==='none' || event.target.value==='category'){
     if(items_per_page.value >0){
       window.location.href = `${domain_url}/products.html?limit=${items_per_page.value}`
@@ -140,7 +140,7 @@ function loadInitialData(url) {
       
     })
     .catch(err => {
-      console.log(err);
+      //console.log(err);
     });
     
 }

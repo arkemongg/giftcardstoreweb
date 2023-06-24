@@ -85,7 +85,7 @@ product_data.then(data=>{
     disableBtns()
 
 }).catch(error=>{
-    console.log(error);
+    //console.log(error);
     const btns = document.querySelectorAll(".checkout-options button")
     btns.forEach(btn=>{
         btn.disabled =true

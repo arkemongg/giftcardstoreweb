@@ -129,7 +129,7 @@ function validate_password() {
     sign_up_post.addEventListener('click',event=>{
     event.preventDefault()
     document.body.appendChild(loading_element)
-    console.log(verify_password);
+    //console.log(verify_password);
     if(verify_email === false){
        document.body.removeChild(loading_element)
         email_waring.classList.remove('hidden')

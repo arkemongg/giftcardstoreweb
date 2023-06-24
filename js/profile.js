@@ -70,7 +70,7 @@ validate_customer()
     membership_data.innerHTML = data.membership
     phone.value = data.phone
     
-    console.log(data);
+    //console.log(data);
     birth_date.value = data.birth_date
 })
 
@@ -287,7 +287,7 @@ update_profile_btn.addEventListener('click',event=>{
     if(new_password===''&&repeat_password ===''){
         validatePassword(current_password,accessToken)
             .then(data=>{
-                console.log(data);
+                //console.log(data);
             })
             .catch(err=>{
                 
@@ -344,7 +344,7 @@ update_profile_btn.addEventListener('click',event=>{
                     }, 3000);
                 }, 1000);
             }else {
-                console.log(response);
+                //console.log(response);
                 setTimeout(() => {
                     document.body.removeChild(loading_element)
                     message.style.color = 'red'

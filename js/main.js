@@ -61,7 +61,7 @@ function loadInitialData() {
       
     })
     .catch(err => {
-      console.log(err,'err');
+      //console.log(err,'err');
       document.body.removeChild(loading_element);
     });
 }
@@ -70,7 +70,7 @@ function loadMoreData() {
   if (nextPageUrl) {
     fetchData(nextPageUrl)
       .then(data => {
-        console.log(data);
+        //console.log(data);
         data.results.forEach(product => {
 
         let image_url = '';
@@ -146,7 +146,7 @@ function restartAutoClick() {
 
 cards.addEventListener('click',event=>{
   restartAutoClick()
-  console.log(event);
+  //console.log(event);
 })
 
 var touchStartX = 0;
@@ -309,7 +309,7 @@ nav_category.addEventListener('click',e=>{
     behavior: 'smooth'
   });
 })
-console.log(goto_category);
+//console.log(goto_category);
 if(goto_category === 'categories'){
   nav_category.click()
   url.searchParams.delete('goto')

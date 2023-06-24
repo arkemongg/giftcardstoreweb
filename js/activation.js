@@ -28,11 +28,11 @@ function activateUser(uid, token) {
         return response.json();
       })
       .then(result => {
-        console.log("y");
+        //console.log("y");
         activation.querySelector('.activated').classList.remove('hidden')
       })
       .catch(error => {
-        console.log("n");
+        //console.log("n");
         activation.querySelector('.failed').classList.remove('hidden')
       });
   }
@@ -43,8 +43,8 @@ function activateUser(uid, token) {
     const uid = searchParams.get('uid');
     const token = searchParams.get('token');
 
-    console.log(uid);
-    console.log(token);
+    //console.log(uid);
+    //console.log(token);
 
     activateUser(uid, token);
 

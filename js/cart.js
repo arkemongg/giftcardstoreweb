@@ -20,7 +20,7 @@ export function create_or_get_cart(){
 }
 
 const cart_id = localStorage.getItem('cart_id')
-console.log(cart_id);
+//console.log(cart_id);
 
 if (cart_id===null){
     create_or_get_cart()
@@ -61,7 +61,7 @@ export function cart_inside_design(flag = false){
             const number = parseFloat(str.replace(/\$/g, ""));
             const cart_total_price = document.querySelector('.cart-total-price')
             let total_price = parseFloat(cart_total_price.textContent)
-            console.log(number);
+            //console.log(number);
             total_price -= number
             const cart_count_dom = document.querySelector('.cart-count')
             let cart_count_dom_int = parseFloat(cart_count_dom.textContent)
@@ -78,7 +78,7 @@ export function cart_inside_design(flag = false){
             })
               .then(response => {
                 if (response.ok) {
-                  console.log('Item deleted successfully.');
+                  //console.log('Item deleted successfully.');
                   const cart_details_area = document.querySelector('.flex-cart-list')
                 
                   if(cart_details_area.childElementCount===0){
@@ -182,7 +182,7 @@ export function add_to_cart_btn(card){
   })
 })
   .then(response => {
-    console.log(response);
+    //console.log(response);
     if (response.ok) {
       const ul = document.querySelector('.flex-cart-list')
       ul.innerHTML = ''
@@ -223,9 +223,9 @@ const checkout_btn = document.querySelector('.checkout-btn')
 
 checkout_btn.addEventListener('click',e=>{
   const cart_id = localStorage.getItem('cart_id')
-  const cart = document.querySelector('.flex-cart-list h1')
+  const cart_empty = document.querySelector('.flex-cart-list h1')
 
-  if (cart.textContent== 'Empty' ){
+  if (cart_empty !== null){
 
   }else {
     document.body.append(createLoadingElement())
