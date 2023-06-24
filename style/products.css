@@ -46,16 +46,15 @@
 .search-area{
     width: 100%;
     position: relative;
-    margin-top: 1px;
     display: block;
-    background: #2B3A50;
+    background: rgb(55 65 81);
     padding-top: 10px;
 }
 #items-per-page{
     max-width: 145px;
     font-size: 12px;
     outline: none;
-    background: #1F2937;
+    background: rgb(55 65 81);
     color: white;
     border-radius: 0;
 }
@@ -64,7 +63,7 @@
     max-width: 145px;
     font-size: 12px;
     outline: none;
-    background: #1F2937;
+    background: rgb(55 65 81);
     color: white;
     border-radius: 0;
 }
