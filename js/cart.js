@@ -223,9 +223,9 @@ const checkout_btn = document.querySelector('.checkout-btn')
 
 checkout_btn.addEventListener('click',e=>{
   const cart_id = localStorage.getItem('cart_id')
-  const cart = document.querySelector('.flex-cart-list')
+  const cart = document.querySelector('.flex-cart-list h1')
 
-  if (cart.childElementCount==0 ){
+  if (cart.textContent== 'Empty' ){
 
   }else {
     document.body.append(createLoadingElement())

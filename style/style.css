@@ -65,34 +65,6 @@ header{
 .nav-list li a{
     text-decoration: none;
 }
-.cart-img{
-    height: 50px;
-    overflow: hidden;
-}
-.nav-cart{
-    width: 80px;
-    height: 50px;
-    flex:none;
-}
-.nav-cart img{
-    width: 50px;
-    height: 50px;
-}
-.cart_count{
-    display: inline-block;
-    width: 20px;
-    height: 25px;
-    text-align: center;
-    background-color: #0409a0;
-    position: relative;
-    left: 20px;
-    top: -45px;
-}
-.cart_count:hover{
-    background-color: #0433a0b1;
-    padding: 1px;
-    transition: 0.5s;
-}
 /* Nav Area */
 
 /* Nav responsive Area */
@@ -522,7 +494,12 @@ nav{
     min-width: 80px;
     max-width: 80px;
 }
-
+.checkout-btn{
+    background: rgb(22 101 52);
+}
+.checkout-btn:hover{
+    background: rgb(22 163 74);
+}
 /* cart */
 
 @keyframes wave-blink {
