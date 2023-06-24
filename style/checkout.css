@@ -220,11 +220,10 @@ body{
 
 }
 .your-product{
-    background: rgb(30 64 175);
+    background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
 .your-product:hover{
-    background: rgba(30, 64, 175, 0.745);
-    
+    background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .your-account-details{
@@ -233,12 +232,15 @@ body{
 .your-account-details:hover{
     background: #1f2937a0;
 }
-.checkout-next-btn,.checkout-checkout,.account-page-login-sign-up{
-    background: #166534;
+
+.checkout-next-btn,.checkout-checkout,.account-page-login-sign-up,.checkout-create-order{
+    --tw-bg-opacity: 1;
+    background-color: rgb(22 101 52 / var(--tw-bg-opacity));
 }
 
-.checkout-next-btn:hover,.checkout-checkout:hover,.account-page-login-sign-up:hover{
-    background: #166534a3;
+.checkout-next-btn:hover,.checkout-checkout:hover,.account-page-login-sign-up:hover,.checkout-create-order:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
 }
 .hidden{
     display: none;

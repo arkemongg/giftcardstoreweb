@@ -1,0 +1,14 @@
+.support-section{
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.support-section h2{
+    color: white
+}
+
+.support-section input,.text-area textarea{
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+    color: white;
+}

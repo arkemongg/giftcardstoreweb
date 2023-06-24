@@ -479,9 +479,10 @@ nav{
     min-width: 95%;
     margin: auto;
     max-height: 450px;
-    overflow: auto;
+    overflow-y: auto;
 }
 .flex-cart-items{
+    margin: auto;
     height: 80px;
     margin-top: 10px;
     display: flex;
@@ -491,8 +492,8 @@ nav{
     justify-content: center;
 }
 .cart-item-img{
-    min-width: 90px;
-    max-width: 90px;
+    min-width: 70px;
+    max-width: 70px;
 }
 .cart-item-img img{
     margin: auto;
@@ -518,9 +519,8 @@ nav{
     outline: 0.5px solid ;
 }
 .cart-item-total{
-    min-width: 50px;
-    max-width: 60px;
-
+    min-width: 80px;
+    max-width: 80px;
 }
 
 /* cart */
@@ -589,6 +589,21 @@ nav{
     .card-container{
         width: 420px;
     }
+    .flex-cart-list::-webkit-scrollbar {
+        width: 10px; /* Adjust the width of the scrollbar */
+      }
+      
+      .flex-cart-list::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Set the background color of the scrollbar track */
+      }
+      
+      .flex-cart-list::-webkit-scrollbar-thumb {
+        background-color: #888; /* Set the color of the scrollbar thumb */
+      }
+      
+      .flex-cart-list::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Set the color of the scrollbar thumb on hover */
+      }
 }
 
 /* PAYMENT METHODS */
@@ -640,7 +655,7 @@ nav{
         z-index: 99999999999;
     }
     .cart-details-fixed-area{
-        max-height: 600px;
+        max-height: 500px;
     }
 
     .flex-cart-list{
