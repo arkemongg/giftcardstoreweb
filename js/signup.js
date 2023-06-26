@@ -10,9 +10,6 @@ document.body.appendChild(loading_element)
 header_responsvie_nav();
 validate_user_update_design();
 
-setTimeout(() => {
-    document.body.removeChild(loading_element)
-}, 500);
 
 
 const sign_up_post = document.querySelector('.sign-up-post')

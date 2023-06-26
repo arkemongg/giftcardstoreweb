@@ -24,7 +24,7 @@ body{
 }
 
 
-.signup-design-section,.signup-design-section label,.signup-design-section input,.signup-design-section input::placeholder,.signup-design-section p{
+.signup-design-section,.signup-design-section label,.signup-design-section input,.signup-design-section input::placeholder{
     background: #1F2937;
     color: white;
 }

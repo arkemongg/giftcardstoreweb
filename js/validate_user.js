@@ -72,7 +72,7 @@ validate_user()
     if (window.location.href.includes("profile.html")) {
       window.location.href = "login.html";
     }
-    console.error('Error:', error.message);
+    // console.error('Error:', error.message);
   });
 }
 

@@ -19,7 +19,8 @@
     border-radius: 15px;
 }
 .user-profile-card p{
-    color: #07a;
+    /* color: #07a; */
+    color: white;
     background: none;
 }
 .user-profile-image{
@@ -72,8 +73,19 @@
     min-height: 750px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 22px 70px 4px;
 }
+
+#edit-profile label {
+    background-color: rgb(75 85 99);
+}
+#edit-profile input{
+    background-color: rgb(55 65 81);
+    color:white;
+}
 .view-user-account-feature-field label{
     width: 100px;
+}
+.blocked{
+    background-color: rgb(75 85 99) !important;
 }
 .none{
     display: none;
@@ -192,6 +204,8 @@
 #new-password:focus{
     outline: none;
 }
+
+
 @media (max-width: 768px) {
     .order-list-details{
         font-size: 8px;

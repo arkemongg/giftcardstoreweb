@@ -1,6 +1,6 @@
 import { header_responsvie_nav } from './header.js';
 import { validate_user , validate_user_update_design , validate_customer} from './validate_user.js';
-import { request_data } from './data_request.js';
+import { request_data,put_request } from './data_request.js';
 import {generateOrderListItem,createListItem,loading_element,validatePassword} from './templates.js'
 import { api_url,domain_url } from './urls.js';
 document.body.appendChild(loading_element)
@@ -239,6 +239,31 @@ function validate_new_password() {
 
   validate_new_password()
   const accessToken = localStorage.getItem('accessToken')
+
+  function update_profile(){
+    const profie_datas = document.querySelectorAll('#edit-profile input')
+   
+    const email = profie_datas[0].value
+    const first_name = profie_datas[2].value
+    const last_name = profie_datas[3].value
+    const user_data = {
+        email:email,
+        first_name: first_name,
+        last_name: last_name
+      };
+    const user_responseData = put_request(`${api_url}/auth/users/me/`,accessToken,user_data)
+
+    const phone = profie_datas[4].value
+    let birth_date = profie_datas[6].value
+    const customer_data = {
+        phone: phone,
+        birth_date: birth_date
+      };
+  
+      const customer_responseData = put_request(`${api_url}/api/customer/me/`, accessToken, customer_data);
+  }
+
+  
 update_profile_btn.addEventListener('click',event=>{
     event.preventDefault();
     document.body.appendChild(loading_element)
@@ -248,7 +273,6 @@ update_profile_btn.addEventListener('click',event=>{
     const repeat_password = document.getElementById('repeat-password').value
     const current_password = document.getElementById('current-password').value
     if(current_password===''){
-        
         setTimeout(() => {
             document.body.removeChild(loading_element)
             message.style.color = 'red'
@@ -267,7 +291,6 @@ update_profile_btn.addEventListener('click',event=>{
         if(new_password===''&&repeat_password ===''){
 
         }else{
-            
             setTimeout(() => {
                 document.body.removeChild(loading_element)
                 message.style.color = 'red'
@@ -287,11 +310,25 @@ update_profile_btn.addEventListener('click',event=>{
     if(new_password===''&&repeat_password ===''){
         validatePassword(current_password,accessToken)
             .then(data=>{
-                //console.log(data);
+                update_profile()
+                setTimeout(() => {
+                    document.body.removeChild(loading_element)
+                    message.style.color = 'green'
+                    message.textContent = 'Profile Updated Successfully'
+                    message.style.padding = '5px'
+                    message.classList.add('shake-message')
+                    message.classList.remove('hidden')
+                    setTimeout(() => {
+                        message.classList.remove('shake-message')
+                    }, 1000);
+                    setTimeout(() => {
+                        window.location.reload()
+                    }, 1000);
+                }, 1000);
+
             })
             .catch(err=>{
-                
-                
+        
                 setTimeout(() => {
                     document.body.removeChild(loading_element)
                     message.style.color = 'red'
@@ -329,6 +366,7 @@ update_profile_btn.addEventListener('click',event=>{
         })
         .then(response => {
             if (response.status === 204) {
+                update_profile()
                 setTimeout(() => {
                     document.body.removeChild(loading_element)
                     message.style.color = 'green'
@@ -343,6 +381,7 @@ update_profile_btn.addEventListener('click',event=>{
                         window.location.reload()
                     }, 3000);
                 }, 1000);
+                
             }else {
                 //console.log(response);
                 setTimeout(() => {

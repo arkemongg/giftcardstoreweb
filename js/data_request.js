@@ -297,3 +297,31 @@ export function resetPasswordConfirm(uid, token, newPassword) {
     }
   });
 }
+
+export function put_request(apiURL, accessToken, data) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const requestOptions = {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `JWT ${accessToken}`
+        },
+        body: JSON.stringify(data)
+      };
+
+      const response = await fetch(apiURL, requestOptions);
+      const responseData = await response.json();
+
+      // Handle the response data
+      //console.log(responseData);
+
+      resolve(responseData);
+    } catch (error) {
+      // Handle any errors
+      console.error(error);
+      reject(error);
+    }
+  });
+}
+

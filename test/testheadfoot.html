@@ -1,223 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,900;1,100;1,500;1,900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        *{
-            font-family: 'Roboto', sans-serif;
-        }
-        .card-container{
-            width: 1170px;
-            height: 500px;
-            margin: auto;
-            background: #000;
-            overflow: hidden;
-        }
-        @media (max-width: 375px) {
-        .card-container {
-        width: 290px;
-        }
-        }
-        .cards{
-            display: flex;
-            transition: 1s;
-        }
-        .card img{
-            border-radius: 15px;
-            width: 100%;
-            border: 0.5px solid black;
-        }
-        .card{
-            min-width: 350px;
-            max-width: 350px;
-            height: 420px;
-            background: #FFF3DB;
-            color : #61090B;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 15px;
-        }
-        .product-btn-area{
-            display: flex;
-            justify-content:space-between;
-            margin-top: 10px;
-        }
-        .product-btn-area button{
-            
-            width: 48%;
-        }
-        .button{
-            width: 100px;
-            margin: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <div class="card-container">
-        <div class="cards">
-          <div class="card">
-            <h1 style="font-size: 26px;font-weight: 700; margin-top: -20px; padding: 10px; text-align: center;"><span class="product-title ">Google Play 5$</span></h1>
-            <div class="product-image-area">
-                <img src="/assets/gplay.png" alt="gplay">
-            </div>
-            <div class="product-details-area">
-            <h1 style="font-size: 36px;font-weight: 900; padding: 2px; text-align: center;" ><span class="product-price">5.99$</span></h1>
-            <p style="font-size: 16px;font-weight: 900; text-align: center;"><span class="product-category">Gaming</span></p>
-            </div>
-            <div class="product-btn-area">
-                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded buy-now">
-                    Buy Now
-                  </button>
-                  <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded add-to-cart">
-                    Add to cart
-                  </button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="product-image-area">
-                <img src="/assets/gplay.png" alt="gplay">
-            </div>
-            <div class="product-details-area">
-            <p>Title: <span class="product-title">Google Play 5$</span></p>
-            <p>Price : <span class="product-price">5.99$</span></p>
-            <p>Category : <span class="product-category">Gaming</span></p>
-            </div>
-            <div class="product-purchase-area">
-                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded buy-now">
-                    Buy Now
-                  </button>
-                  <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded add-to-cart">
-                    Add to cart
-                  </button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="product-image-area">
-                <img src="/assets/gplay.png" alt="gplay">
-            </div>
-            <div class="product-details-area">
-            <p>Title: <span class="product-title">Google Play 5$</span></p>
-            <p>Price : <span class="product-price">5.99$</span></p>
-            <p>Category : <span class="product-category">Gaming</span></p>
-            </div>
-            <div class="product-purchase-area">
-                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded buy-now">
-                    Buy Now
-                  </button>
-                  <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded add-to-cart">
-                    Add to cart
-                  </button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="product-image-area">
-                <img src="/assets/gplay.png" alt="gplay">
-            </div>
-            <div class="product-details-area">
-            <p>Title: <span class="product-title">Google Play 5$</span></p>
-            <p>Price : <span class="product-price">5.99$</span></p>
-            <p>Category : <span class="product-category">Gaming</span></p>
-            </div>
-            <div class="product-purchase-area">
-                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded buy-now">
-                    Buy Now
-                  </button>
-                  <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded add-to-cart">
-                    Add to cart
-                  </button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="product-image-area">
-                <img src="/assets/gplay.png" alt="gplay">
-            </div>
-            <div class="product-details-area">
-            <p>Title: <span class="product-title">Google Play 5$</span></p>
-            <p>Price : <span class="product-price">5.99$</span></p>
-            <p>Category : <span class="product-category">Gaming</span></p>
-            </div>
-            <div class="product-purchase-area">
-                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded buy-now">
-                    Buy Now
-                  </button>
-                  <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded add-to-cart">
-                    Add to cart
-                  </button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="product-image-area">
-                <img src="/assets/gplay.png" alt="gplay">
-            </div>
-            <div class="product-details-area">
-            <p>Title: <span class="product-title">Google Play 5$</span></p>
-            <p>Price : <span class="product-price">5.99$</span></p>
-            <p>Category : <span class="product-category">Gaming</span></p>
-            </div>
-            <div class="product-purchase-area">
-                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded buy-now">
-                    Buy Now
-                  </button>
-                  <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded add-to-cart">
-                    Add to cart
-                  </button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="product-image-area">
-                <img src="/assets/gplay.png" alt="gplay">
-            </div>
-            <div class="product-details-area">
-            <p>Title: <span class="product-title">Google Play 5$</span></p>
-            <p>Price : <span class="product-price">5.99$</span></p>
-            <p>Category : <span class="product-category">Gaming</span></p>
-            </div>
-            <div class="product-purchase-area">
-                <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded buy-now">
-                    Buy Now
-                  </button>
-                  <button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded add-to-cart">
-                    Add to cart
-                  </button>
-            </div>
-          </div>
-        </div>
-    <button class="btn-left" style="background-color: red;"><img src="/assets/back.png" alt=""></button>
-    <button class="btn-right" style="background-color: aqua;">Right </button>
+  <button>
+    xxxx
+  </button>
+  <script>
+const url = 'http://127.0.0.1:8000/auth/users/me/';
+const currentPassword = '113355';
 
-      <script>
-        const btn_right = document.querySelector('.btn-right')
-        const btn_left = document.querySelector('.btn-left')
+const headers = {
+  'Content-Type': 'application/json',
+};
 
-        let start = 0;
-        const cards = document.querySelector('.cards')
-        const card = document.querySelector('.card')
-        let owidth = -1*(cards.offsetWidth)
-        btn_right.addEventListener('click',e=>{
-                let limit = cards.childElementCount*-390
-                console.log(limit);
-                console.log(owidth);
-                if(owidth>limit){
-                    owidth -=390
-                    start-=390
-                    cards.style.transform = `translateX(${start}px)`
-                }
-        })
-        btn_left.addEventListener('click',e=>{
-            if (start!==0){
-                owidth +=390
-                start+=390
-                cards.style.transform = `translateX(${start}px)`
-            }
-            
-        })
-      </script>
+const data = {
+  current_password: currentPassword,
+};
+
+fetch(url, {
+  method: 'DELETE',
+  headers: headers,
+  body: JSON.stringify(data),
+})
+  .then(response => {
+    if (response.ok) {
+      console.log('User deletion successful.');
+    } else {
+      console.log(`User deletion failed with status code ${response.status}.`);
+    }
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+  });
+  </script>
 </body>
+
 </html>
